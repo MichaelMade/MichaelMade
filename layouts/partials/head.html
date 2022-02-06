@@ -1,31 +1,60 @@
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>{{ .Title }}</title>
 
-  {{ "<!-- Mobile Responsive Meta -->" | safeHTML }}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
   {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
-  {{ "<!-- Plugins -->" | safeHTML }}
-  {{ range site.Params.plugins.css }}
-  <link rel="stylesheet" href="{{ .link | absURL }}">
+  {{ with site.Params.baidu_site_verification }}
+	{{ "<!-- baidu site verification -->" | safeHTML }}
+  <meta name="baidu-site-verification" content="{{ . }}" />
   {{ end }}
 
-  {{ with site.Params.snipcartApiKey }}
-  {{ "<!-- Snipcart -->" | safeHTML }}
-  <link rel="preconnect" href="https://app.snipcart.com/">
-  <link rel="preconnect" href="https://cdn.snipcart.com/">
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.28/default/snipcart.css">
-  <script async src="https://cdn.snipcart.com/themes/v3.0.28/default/snipcart.js"></script>
+  <style>
+    :root{
+      --primary-color:{{ site.Params.theme_color }};
+    }
+  </style>
+
+  {{ "<!-- plugins -->" | safeHTML }}
+  {{ range site.Params.plugins.css }}
+  <link rel="stylesheet" href="{{ .link | absURL }} ">
   {{ end }}
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
-  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+  {{ $styles := resources.Get "css/style.css" | minify }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
-  {{ "<!-- Favicon -->" | safeHTML }}
+  {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
+
+  {{ with site.Params.google_analytics_id }}
+	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', '{{ . }}');
+	</script>
+	{{ end }}
+
+  {{ with site.Params.baidu_analytics_id }}
+	{{ "<!--  Baidu analytics -->" | safeHTML }}
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?{{ . }}";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+	{{ end }}
+
 </head>

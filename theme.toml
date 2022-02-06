@@ -1,16 +1,17 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
-name = "Hargo Hugo E-Commerce Theme"
+name = "Kross Hugo"
 license = "MIT"
-licenselink = "https://github.com/themefisher/Hargo-hugo-ecommerce-theme/blob/master/LICENSE"
-description = "Hargo is an E-commerce theme powered by Hugo and Snipcart. It's fully functional, users can order items and also payments throw this theme"
-homepage = "https://gethugothemes.com/products/hargo/"
-demosite = "https://demo.gethugothemes.com/hargo/"
-tags = ["Ecommerce", "bootstrap", "blog", "contact", "responsive", "gethugothemes", "clean" , "Single Product", "Minimal", "light", "google analytics", "disqus", "mobile", "fast", "customizable", "white", "flex", "pages", "hugo themes", "hugo templates", "netlify", "Themefisher"]
-features = ["Ecommerce", "responsive", "bootstrap-4"]
-min_version = "0.64.0 extended"
+licenselink = "https://github.com/themefisher/kross-hugo/blob/master/LICENSE"
+description = "Kross is a creative, sleek and modern personal portfolio Hugo theme with a gorgeous appearance."
+homepage = "https://gethugothemes.com/products/kross-hugo-theme/"
+demosite = "https://demo.gethugothemes.com/kross/"
+tags = ['landing-page', 'fast', 'light', 'white', 'modern', 'themefisher', 'hugo-theme', 'hugo-templates', 'bootstrap', 'blog', 'responsive', 'clean', 'simple', 'creative', 'contact-form', 'custom-themes', 'mobile', 'minimalistic', 'pages', 'resume', 'portfolio', 'google analytics', 'customizable', 'flexbox', 'presentation', 'product', 'theme', 'typography', 'gethugothemes']
+features = ['bootstrap','responsive']
+min_version = "0.64.0"
 
 [author]
   name = "Themefisher"
-  homepage = "https://themefisher.com"
+  homepage = "https://themefisher.com/"
+
+[original]
+  name = "kross"
+  homepage = "https://themefisher.com/products/kross-creative-portfolio-template/"

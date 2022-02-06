@@ -1,26 +1,21 @@
 {{ define "main" }}
 
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <article>
-          <h2>{{ .Title }}</h2>
-          <ul class="list-inline mb-4">
-            <li class="list-inline-item"><i class="ti-pencil-alt text-primary mr-2"></i> By {{ .Params.Author }}</li>
-            <li class="list-inline-item"><i class="ti-calendar text-primary mr-2"></i>
-              {{ .PublishDate.Format "02 Jan, 2006" }}</li>
-          </ul>
-          <img src="{{ .Params.Image | absURL }}" alt="{{ .Title }}" class="img-fluid w-100 mb-4">
+  {{ partial "page-title.html" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center mb-4">
+          <img src="{{.Params.image | absURL }}" alt="{{.Title}}" class="img-fluid rounded mb-4">
+          <p class="font-secondary">Published on {{ .PublishDate.Format "Jan 02, 2006" }} by <span class="text-primary">{{site.Params.Author}}</span></p>
+        </div>
+        <div class="col-lg-9">
           <div class="content">
-            {{.Content}}
+            {{.Content }}
           </div>
-        </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-{{ partial "cta.html" . }}
+  </section>
 
 {{ end }}
