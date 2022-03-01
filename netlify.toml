@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --gc"
+  command = "hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk -d public"
   
 [build.environment]
   HUGO_VERSION = "0.87.0"
