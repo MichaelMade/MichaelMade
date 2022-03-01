@@ -1,9 +1,9 @@
 # default configuration
-baseURL = "http://demo.gethugothemes.com/kross/"
+baseURL = "https://michaelmade.netlify.app"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "kross-hugo"
-title = "Kross"
+title = "MichaelMade"
 
 # css plugins
 [[params.plugins.css]]
