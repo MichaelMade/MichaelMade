@@ -5,6 +5,7 @@ $(window).on('load', function () {
 });
 
 (function ($) {
+	
 	'use strict';
 
 	// Sticky Menu

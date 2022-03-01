@@ -1,7 +1,6 @@
 // Preloader js    
 $(window).on('load', function () {
 	$('.preloader').fadeOut(100);
-	
 });
 
 (function ($) {
@@ -47,6 +46,7 @@ $(window).on('load', function () {
 		 When there're no parallax, just ignore the below
 		 other operations, as below elements are bingding to the parallax.
 		*/
+		if (parallaxBox)
 		if (!parallaxBox) {
 			return;
 		}

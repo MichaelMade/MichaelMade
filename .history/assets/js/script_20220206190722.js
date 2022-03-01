@@ -1,7 +1,6 @@
 // Preloader js    
 $(window).on('load', function () {
 	$('.preloader').fadeOut(100);
-	
 });
 
 (function ($) {
@@ -49,6 +48,7 @@ $(window).on('load', function () {
 		*/
 		if (!parallaxBox) {
 			return;
+			
 		}
 
 		var
