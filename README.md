@@ -4,10 +4,6 @@ Senior Mobile Software Engineer at [Akamai](https://github.com/akamai). I build 
 
 **[RPT](https://apps.apple.com/us/app/rpt-reverse-pyramid-training/id6745407020)**, **[RoutineCut](https://apps.apple.com/us/app/routinecut-floor-music-cut/id6794163070)**, and **[threee](https://apps.apple.com/us/app/threee-daily-top-3/id6836048593)** are live on the [App Store](https://apps.apple.com/us/developer/michael-moore/id1123892964). I also build product software for Charlotte businesses at [TaskLift](https://tasklift.tech).
 
-## What I'm looking for
-
-I'm looking for **iOS** and **applied AI** roles where I can ship native Apple software and production-minded agent systems. Open to mobile engineering, product-focused app work, and applied AI that has to be reliable in use.
-
 ## What I work with
 
 - **iOS and Apple platforms:** Swift, SwiftUI, SwiftData, Swift Charts, StoreKit, AVFoundation
